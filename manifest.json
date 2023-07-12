@@ -1,0 +1,13 @@
+{
+    "short_name": "AndDevTeam",
+    "name": "AND Develop Team",
+    "icons": [
+      {
+        "src": "icons/app.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+  }
