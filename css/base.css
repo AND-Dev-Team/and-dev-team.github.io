@@ -349,7 +349,7 @@ p{text-align: justify;}
     height: 8px;
     display: block;
     border-radius: 50%;
-    background: rgb(58, 118, 191);}
+    background: rgb(128, 187, 120);}
 
 
 /*文章页评论*/
@@ -416,7 +416,7 @@ p{text-align: justify;}
 .youlian_list div{padding: 10px 20px 12px 20px;font-size: 13px;color: #666;}
 .youlian_list div ul{overflow: hidden;}
 .youlian_list div ul li{margin-top: 17.4px;;position: relative;padding-left:30px;line-height: 20px;    font-size: 15px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-.youlian_list div ul li:before{    position: absolute;top: 35%;left: 5px;content: "";width: 8px;height: 8px;display: block;border-radius: 50%;background: rgb(58, 118, 191);}
+.youlian_list div ul li:before{    position: absolute;top: 35%;left: 5px;content: "";width: 8px;height: 8px;display: block;border-radius: 50%;background: rgb(128, 187, 120);}
 
 
 
