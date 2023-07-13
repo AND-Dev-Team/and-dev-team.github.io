@@ -506,7 +506,7 @@ p{text-align: justify;}
 /*手机端*/
 @media (max-width: 1099px){
     /*手机页面导航*/
-    .head_box{width:100%;background: #80bb78;height: 50px;border: none;position: fixed;top: 0;}
+    .head_box{width:100%;background: #5d8757;height: 50px;border: none;position: fixed;top: 0;}
     .head_box:before{display: none;}
     .header{width: 95%;margin: 0 auto;height: 100%;line-height: 56px;}
 
