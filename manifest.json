@@ -26,10 +26,7 @@
   ],
   "icons": [
     {
-      "src": "/img/team2.png"
-    },
-    {
-      "src": "/favicon.ico",
+      "src": "/img/team2.png",
       "type": "image/x-icon"
     }
   ],
