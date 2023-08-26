@@ -592,47 +592,45 @@
 </body>
 
 <script>
-    /* 判断当前浏览器是否支持serviceWorker */
-    if ('serviceWorker' in navigator) {
-        /* 当页面加载完成就创建一个serviceWorker */
-        window.addEventListener('load', function () {
-            /* 创建并指定对应的执行内容 */
-            /* scope 参数是可选的，可以用来指定你想让 service worker 控制的内容的子目录。 在这个例子里，我们指定了 '/'，表示 根网域下的所有内容。这也是默认值。 */
-            navigator.serviceWorker.register('./sw.js', {scope: './'})
-                .then(function (registration) {
- 
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                })
-                .catch(function (err) {
- 
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-        });
-    }
-    /* 监听安装事件，install 事件一般是被用来设置你的浏览器的离线缓存逻辑 */
-this.addEventListener('install', function (event) {
- 	
-     /* 通过这个方法可以防止缓存未完成，就关闭serviceWorker */
-     event.waitUntil(
-         /* 创建一个名叫V1的缓存版本 */
-         caches.open('v1').then(function (cache) {
-             /* 指定要缓存的内容，地址为相对于跟域名的访问路径 */
-             return cache.addAll([
-                 './index.html'
-             ]);
-         })
-     );
- });
- 
- /* 注册fetch事件，拦截全站的请求 */
- this.addEventListener('fetch', function(event) {
-   event.respondWith(
-     // magic goes here
-       
-       /* 在缓存中匹配对应请求资源直接返回 */
-     caches.match(event.request)
-   );
- });
+
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+  const CACHE_NAME = 'cool-cache';
+
+// Add whichever assets you want to pre-cache here:
+const PRECACHE_ASSETS = [
+    '/assets/',
+    '/src/'
+]
+
+// Listener for the install event - pre-caches our assets list on service worker install.
+self.addEventListener('install', event => {
+    event.waitUntil((async () => {
+        const cache = await caches.open(CACHE_NAME);
+        cache.addAll(PRECACHE_ASSETS);
+    })());
+});
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
+});
+self.addEventListener('fetch', event => {
+  event.respondWith(async () => {
+      const cache = await caches.open(CACHE_NAME);
+
+      // match the request to our cache
+      const cachedResponse = await cache.match(event.request);
+
+      // check if we got a valid response
+      if (cachedResponse !== undefined) {
+          // Cache hit, return the resource
+          return cachedResponse;
+      } else {
+        // Otherwise, go to the network
+          return fetch(event.request)
+      };
+  });
+});
   </script>
 
 </html>
