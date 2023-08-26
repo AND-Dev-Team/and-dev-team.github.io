@@ -32,7 +32,10 @@
       "src": "/img/team2.png"
     },
     {
-      "src": "/img/team-X.png"
+      "src": "/img/team-X.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/favicon.ico",
