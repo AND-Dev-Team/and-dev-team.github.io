@@ -33,6 +33,10 @@
       "type": "image/x-icon"
     },
     {
+      "src": "/img/team-X.png",
+      "type": "image/x-icon"
+    },
+    {
       "src": "/favicon.ico",
       "type": "image/x-icon"
     }
