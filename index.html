@@ -587,12 +587,11 @@
     </div>
 
 </div>
-
+<script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('pwabuilder-sw.jss')
+    }
+  </script>
 </body>
 
 </html>
-<script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
-    }
-  </script>
