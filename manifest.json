@@ -47,4 +47,8 @@
     }
   ],
   "id": "AND Develop Center"
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 120
+  }
 }
