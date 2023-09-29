@@ -13,5 +13,4 @@
 </div>
 
 
-# And_dev_team
-And_dev_team官方网址
+# AND Develop Team
