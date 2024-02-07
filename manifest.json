@@ -17,5 +17,11 @@
     }
   ],
   "id": "anddevteam",
-  "lang": "zh"
+  "lang": "zh",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "categories": [
+    "entertainment"
+  ]
 }
