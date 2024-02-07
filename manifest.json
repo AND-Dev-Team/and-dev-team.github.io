@@ -11,9 +11,6 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "favicon.ico"
-    },
-    {
       "src": "img/team-X.png",
       "type": "image/x-icon"
     }
