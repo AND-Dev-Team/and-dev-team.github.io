@@ -12,7 +12,8 @@
   "icons": [
     {
       "src": "img/team-X.png",
-      "type": "image/x-icon"
+      "sizes": "1024x1024",
+      "type": "image/png"
     }
   ],
   "id": "anddevteam",
