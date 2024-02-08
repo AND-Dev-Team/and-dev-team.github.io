@@ -9,6 +9,8 @@
     <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/AND-Dev-Team/and-dev-team.github.io">
     <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/AND-Dev-Team/and-dev-team.github.io">
     <img alt="GitHub forks" src="https://img.shields.io/github/forks/AND-Dev-Team/and-dev-team.github.io">
+    <img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/AND-Dev-Team/and-dev-team.github.io">
+    <img alt="GitHub release (with filter)" src="https://img.shields.io/github/v/release/AND-Dev-Team/and-dev-team.github.io">
     </br>
 </div>
 
